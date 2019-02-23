@@ -14,7 +14,7 @@ figure; hold on;
 
 
 
-
+plot(X,y)
 
 
 
