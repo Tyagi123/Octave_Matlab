@@ -106,9 +106,9 @@ pause;
 
 lambda = 0;
 [error_train, error_val] = ...
-    learningCurve([ones(m, 1) X], y, ...
-                  [ones(size(Xval, 1), 1) Xval], yval, ...
-                  lambda);
+learningCurve([ones(m, 1) X], y, ...
+              [ones(size(Xval, 1), 1) Xval], yval, ...
+              lambda);
 
 plot(1:m, error_train, 1:m, error_val);
 title('Learning curve for linear regression')
@@ -177,7 +177,7 @@ title (sprintf('Polynomial Regression Fit (lambda = %f)', lambda));
 
 figure(2);
 [error_train, error_val] = ...
-    learningCurve(X_poly, y, X_poly_val, yval, lambda);
+learningCurve(X_poly, y, X_poly_val, yval, lambda);
 plot(1:m, error_train, 1:m, error_val);
 
 title(sprintf('Polynomial Regression Learning Curve (lambda = %f)', lambda));
