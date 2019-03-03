@@ -28,7 +28,7 @@ values = [0.01 0.03 0.1 0.3 1 3 10 30];
 
 for C1 = values
 for sigma1 = values
-m = svmTrain(X, y, _C, @(x1, x2) gaussianKernel(x1, x2, sigma1));
+m = svmTrain(X, y, C1, @(x1, x2) gaussianKernel(x1, x2, sigma1));
 e = mean(double(svmPredict(m, Xval) ~= yval));
 if( e <= error_min )
 C = C1;
